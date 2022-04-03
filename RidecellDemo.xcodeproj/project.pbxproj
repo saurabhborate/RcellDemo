@@ -21,6 +21,7 @@
 		E449EFB327F7EA86001F2F0A /* CarInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E449EFB227F7EA86001F2F0A /* CarInfoCell.swift */; };
 		E449EFB527F80964001F2F0A /* VehiclesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E449EFB427F80964001F2F0A /* VehiclesVM.swift */; };
 		E449EFB727F80EDE001F2F0A /* JsonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E449EFB627F80EDE001F2F0A /* JsonData.swift */; };
+		E485209627F9948300655CE4 /* VehicleAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E485209527F9948300655CE4 /* VehicleAnnotation.swift */; };
 		E8D56ADD246E9F618AC0FA8B /* Pods_RidecellDemo_RidecellDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311D4AEC1603F19F2CB498C3 /* Pods_RidecellDemo_RidecellDemoUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		E449EFB227F7EA86001F2F0A /* CarInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfoCell.swift; sourceTree = "<group>"; };
 		E449EFB427F80964001F2F0A /* VehiclesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesVM.swift; sourceTree = "<group>"; };
 		E449EFB627F80EDE001F2F0A /* JsonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonData.swift; sourceTree = "<group>"; };
+		E485209527F9948300655CE4 /* VehicleAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleAnnotation.swift; sourceTree = "<group>"; };
 		E79C237AF4D07A8B6491D149 /* Pods-RidecellDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidecellDemoTests.release.xcconfig"; path = "Target Support Files/Pods-RidecellDemoTests/Pods-RidecellDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		FA48FD666BD44C6CF37E0909 /* Pods-RidecellDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidecellDemo.debug.xcconfig"; path = "Target Support Files/Pods-RidecellDemo/Pods-RidecellDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +157,7 @@
 				E449EF8927F771A3001F2F0A /* LaunchScreen.storyboard */,
 				E449EF8C27F771A3001F2F0A /* Info.plist */,
 				E449EFB227F7EA86001F2F0A /* CarInfoCell.swift */,
+				E485209527F9948300655CE4 /* VehicleAnnotation.swift */,
 			);
 			path = RidecellDemo;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				E449EFB127F773E0001F2F0A /* LocationModel.swift in Sources */,
 				E449EFB327F7EA86001F2F0A /* CarInfoCell.swift in Sources */,
 				E449EF7F27F771A1001F2F0A /* AppDelegate.swift in Sources */,
+				E485209627F9948300655CE4 /* VehicleAnnotation.swift in Sources */,
 				E449EFB727F80EDE001F2F0A /* JsonData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

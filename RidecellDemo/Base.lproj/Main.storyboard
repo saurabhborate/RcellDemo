@@ -23,7 +23,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="bri-D2-OqP"/>
                                 </connections>
                             </mapView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GXd-65-7RH">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GXd-65-7RH">
                                 <rect key="frame" x="0.0" y="588" width="414" height="274"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -57,6 +57,13 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdk-5I-xlB">
+                                                    <rect key="frame" x="28" y="16" width="272" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="7Qm-vA-eh5" firstAttribute="top" secondItem="oWv-CN-ksW" secondAttribute="top" constant="46" id="5da-Jx-Hwz"/>
@@ -66,6 +73,7 @@
                                         <connections>
                                             <outlet property="btnReserveCar" destination="MEx-sH-Zxl" id="9w7-he-R0J"/>
                                             <outlet property="imgCar" destination="7Qm-vA-eh5" id="yYA-MH-RsQ"/>
+                                            <outlet property="lbl" destination="Fdk-5I-xlB" id="lBz-2O-ce5"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
