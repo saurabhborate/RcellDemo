@@ -38,9 +38,7 @@ class RidecellDemoTests: XCTestCase {
       let vm = VehiclesVM()
         
         vm.getVehiclesData()
-        
-
-        XCTAssertNotEqual(vm.p_loactions.count ,0 , "No vehicle data is present")
+        XCTAssertNotEqual(vm.vehicleList.count ,0 , "No vehicle data is present")
 
 
     }

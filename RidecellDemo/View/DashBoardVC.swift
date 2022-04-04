@@ -33,7 +33,7 @@ class DashBoardVC: UIViewController {
 
         var pins : [VehicleAnnotation] = []
 
-        viewModel.p_loactions.forEach { locationX in
+        viewModel.vehicleList.forEach { locationX in
             let addAnotation = VehicleAnnotation()
             addAnotation.title = "\(locationX.id ?? 0)"
             addAnotation.coordinate = CLLocationCoordinate2D(latitude: locationX.lat ?? 0.0, longitude: locationX.lng ?? 0.0)
@@ -89,15 +89,14 @@ extension DashBoardVC: MKMapViewDelegate{
 extension DashBoardVC : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return viewModel.p_loactions.count
+        return viewModel.vehicleList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarInfoCell", for: indexPath) as! CarInfoCell
         
       
-        let vehicle = viewModel.p_loactions[indexPath.row]
-        print(vehicle.id)
+        let vehicle = viewModel.vehicleList[indexPath.row]
          return cell.configureCell(vehicle: vehicle)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
@@ -114,7 +113,6 @@ extension DashBoardVC : UICollectionViewDelegate,UICollectionViewDataSource,UICo
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
 
         guard let indexPath = self.CarCollectionView.indexPathForItem(at: visiblePoint) else { return }
-        print(indexPath)
         self.updateMapFocus(SelectedCarIndex: indexPath)
     }
 }

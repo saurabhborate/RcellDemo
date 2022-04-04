@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import UIKit
 typealias VehicleList = [VehicleDetail]
 
 struct VehicleDetail: Codable {
@@ -40,5 +40,3 @@ struct VehicleDetail: Codable {
         case vehicleTypeID = "vehicle_type_id"
     }
 }
-
-

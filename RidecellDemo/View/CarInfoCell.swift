@@ -8,14 +8,13 @@
 import UIKit
 import SDWebImage
 class CarInfoCell: UICollectionViewCell {
-    @IBOutlet var imgCar : UIImageView!
+    @IBOutlet var imgVehicle : UIImageView!
     @IBOutlet var btnReserveCar : UIButton!
-    @IBOutlet var lbl : UILabel!
+    @IBOutlet var lblVehicleDetail : UILabel!
     
     func configureCell(vehicle: VehicleDetail ) -> Self{
-        self.lbl.text = "\(vehicle.id ?? 0)"
-        
-        self.imgCar.sd_setImage(with: URL(string: vehicle.vehiclePicAbsoluteURL ?? ""), placeholderImage: nil)
+        self.lblVehicleDetail.text = "\(vehicle.id ?? 0)"
+        self.imgVehicle.sd_setImage(with: URL(string: vehicle.vehiclePicAbsoluteURL ?? ""), placeholderImage: nil)
         return self
     }
 }

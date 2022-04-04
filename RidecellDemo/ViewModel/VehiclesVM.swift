@@ -9,27 +9,25 @@ import Foundation
 import CoreLocation
 
 class VehiclesVM {
-    
-    
-    var p_loactions : VehicleList = []
+    var vehicleList : VehicleList = []
     
     func getVehiclesData()  {
-  
+        
         var locations : VehicleList = []
         let decoder = JSONDecoder()
-
+        
         do {
-             locations = try decoder.decode(VehicleList.self, from: jsonString.data(using: .utf8)!)
-            self.p_loactions = locations
+            locations = try decoder.decode(VehicleList.self, from: jsonString.data(using: .utf8)!)
+            self.vehicleList = locations
             
         } catch {
-           print("Unable to parse response")
+            print("Unable to parse response")
         }
         
     }
     
     func getIndexFromIdentifier(_ identifier: Int) -> Int?{
-        for (index , vehicle) in p_loactions.enumerated(){
+        for (index , vehicle) in vehicleList.enumerated(){
             if identifier == vehicle.id{
                 return index
             }
@@ -37,10 +35,10 @@ class VehiclesVM {
         return nil
     }
     func getCenterCoordinateFromIndexPath(_ indexPath: IndexPath) -> CLLocationCoordinate2D?{
-        guard let lat = p_loactions[indexPath.row].lat else {
+        guard let lat = vehicleList[indexPath.row].lat else {
             return nil
         }
-        guard let long = p_loactions[indexPath.row].lng else {
+        guard let long = vehicleList[indexPath.row].lng else {
             return nil
         }
         return CLLocationCoordinate2D(latitude: lat, longitude: long)
