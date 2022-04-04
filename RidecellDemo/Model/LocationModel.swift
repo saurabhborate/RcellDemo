@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 typealias VehicleList = [VehicleDetail]
 
 struct VehicleDetail: Codable {

@@ -9,8 +9,10 @@ import Foundation
 import CoreLocation
 
 class VehiclesVM {
+    //Veribale declearation
     var vehicleList : VehicleList = []
     
+    //Read response from file and serialization is done here
     func getVehiclesData()  {
         
         var locations : VehicleList = []
@@ -25,7 +27,7 @@ class VehiclesVM {
         }
         
     }
-    
+    //Here we get vehicle index from array
     func getIndexFromIdentifier(_ identifier: Int) -> Int?{
         for (index , vehicle) in vehicleList.enumerated(){
             if identifier == vehicle.id{
@@ -34,6 +36,9 @@ class VehiclesVM {
         }
         return nil
     }
+    
+    //If user click on any annotation we will update  center co-ordinate values of our mapview
+    
     func getCenterCoordinateFromIndexPath(_ indexPath: IndexPath) -> CLLocationCoordinate2D?{
         guard let lat = vehicleList[indexPath.row].lat else {
             return nil
