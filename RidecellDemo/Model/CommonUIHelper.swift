@@ -8,18 +8,18 @@
 import Foundation
 import UIKit
 
-    @IBDesignable
-    class DesignableButton: UIButton {
-        @IBInspectable
-        var cornerRadius: CGFloat {
-            get {
-                return layer.cornerRadius
-            }
-            set {
-                layer.cornerRadius = newValue
-            }
+@IBDesignable
+class DesignableButton: UIButton {
+    @IBInspectable
+    var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
         }
-       
+        set {
+            layer.cornerRadius = newValue
+        }
     }
     
+}
+
 
