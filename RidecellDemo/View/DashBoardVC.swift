@@ -89,9 +89,8 @@ extension DashBoardVC : UICollectionViewDelegate,UICollectionViewDataSource,UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarInfoCell", for: indexPath) as! CarInfoCell
-        
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarInfoCell", for: indexPath) as! VehicleDetailCell
+        cell.delgate = self
         let vehicle = viewModel.vehicleList[indexPath.row]
         return cell.configureCell(vehicle: vehicle)
     }
@@ -113,5 +112,11 @@ extension DashBoardVC : UICollectionViewDelegate,UICollectionViewDataSource,UICo
     }
     func scrollToItem(indexPath: IndexPath){
         self.CarCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
+}
+// here we handle custom collection cell related events
+extension DashBoardVC : DelegateVehicleDetailsCell{
+    func btnReserveCarClicked() {
+        print("This feature is in under construction")
     }
 }

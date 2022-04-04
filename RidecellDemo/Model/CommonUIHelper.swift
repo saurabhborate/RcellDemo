@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-class CommonUIHelper{
+
     @IBDesignable
     class DesignableButton: UIButton {
         @IBInspectable
@@ -22,4 +22,4 @@ class CommonUIHelper{
        
     }
     
-}
+
